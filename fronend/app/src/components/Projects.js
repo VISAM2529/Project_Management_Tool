@@ -15,7 +15,7 @@ function Projects() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await axios.get('https://project-management-toolnode.onrender.com/userDetail')
+        const response = await axios.get('http://localhost:5000/userDetail')
         console.log("Response = ",response.data)
         setProfileData(response.data[0])
     
@@ -26,7 +26,7 @@ function Projects() {
     };
     const fetchData2 = async () => {
       try {
-        const response = await axios.get("https://project-management-toolnode.onrender.com/projectDetail")
+        const response = await axios.get("http://localhost:5000/projectDetail")
         console.log("Projects = ",response.data)
         setProjectData(response.data)
         setOgProjectData(response.data)

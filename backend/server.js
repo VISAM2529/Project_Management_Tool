@@ -12,12 +12,8 @@ const port = 5000;
 
 connectDB();
 
-const corsOptions = {
-  origin: "https://project-managementt-tool.netlify.app/",
-  credentials: true,
-};
 
-app.use(cors(corsOptions));
+app.use(cors);
 
 app.use(express.json({ extended: false }));
 

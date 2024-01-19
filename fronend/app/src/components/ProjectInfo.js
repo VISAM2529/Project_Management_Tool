@@ -25,7 +25,7 @@ function ProjectInfo() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await axios.get("https://project-management-toolnode.onrender.com/userDetail");
+        const response = await axios.get("http://localhost:5000/userDetail");
         console.log("Response = ", response.data);
         setProfileData(response.data[0]);
       } catch (error) {
@@ -36,7 +36,7 @@ function ProjectInfo() {
     const fetchData2 = async () => {
       try {
         const response = await axios.get(
-          `https://project-management-toolnode.onrender.com/project/${name}`
+          `http://localhost:5000/project/${name}`
         );
         console.log("projectDATA = ", response.data[0]);
         if (response.data[0]) {
@@ -73,7 +73,7 @@ function ProjectInfo() {
     console.log(task1);
     try {
       const response = await axios.post(
-        `https://project-management-toolnode.onrender.com/doneTask/:${projectData.projectName}/:${task1}`
+        `http://localhost:5000/doneTask/:${projectData.projectName}/:${task1}`
       );
       if (response.data === "success") {
         toast.success("Done");

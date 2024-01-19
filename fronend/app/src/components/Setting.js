@@ -7,7 +7,7 @@ function Setting() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await axios.get("https://project-management-toolnode.onrender.com/userDetail");
+        const response = await axios.get("http://localhost:5000/userDetail");
         console.log("Response = ", response.data);
         setProfileData(response.data[0]);
       } catch (error) {

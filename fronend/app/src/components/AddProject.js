@@ -27,7 +27,7 @@ function AddProject() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://project-management-toolnode.onrender.com/users");
+        const response = await axios.get("http://localhost:5000/users");
         const res = response.data;
         console.log("Response = ", res);
         const usernames = res.map((user) => `${user.username}`);
@@ -40,7 +40,7 @@ function AddProject() {
     };
     const fetchData2 = async () => {
       try {
-        const response = await axios.get('https://project-management-toolnode.onrender.com/userDetail')
+        const response = await axios.get('http://localhost:5000/userDetail')
         console.log("Response = ",response.data)
         setProfileData(response.data[0])
     
@@ -54,7 +54,7 @@ function AddProject() {
   }, []);
   const saveData = async()=>{
     try {
-      axios.post("https://project-management-toolnode.onrender.com/projectDetail",{
+      axios.post("http://localhost:5000/projectDetail",{
         admin:adminRef.current.value,
         projectName:projectNameRef.current.value,
         projectDesc:projectDescRef.current.value,
