@@ -16,7 +16,7 @@ function SignUp() {
 
   const saveData = async()=>{
       try {
-        axios.post("http://localhost:5000/userCreate",{
+        axios.post("https://project-management-toolnode.onrender.com/userCreate",{
           fname:fnameRef.current.value,
           lname:lnameRef.current.value,
           email:emailRef.current.value,
