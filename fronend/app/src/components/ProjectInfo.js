@@ -25,7 +25,7 @@ function ProjectInfo() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await axios.get("https://project-management-tool-yvvo.onrender.com/userDetail");
+        const response = await axios.get("https://project-management-tool-ryex.onrender.com/userDetail");
         console.log("Response = ", response.data);
         setProfileData(response.data[0]);
       } catch (error) {
@@ -36,7 +36,7 @@ function ProjectInfo() {
     const fetchData2 = async () => {
       try {
         const response = await axios.get(
-          `https://project-management-tool-yvvo.onrender.com/project/${name}`
+          `https://project-management-tool-ryex.onrender.com/project/${name}`
         );
         console.log("projectDATA = ", response.data[0]);
         if (response.data[0]) {
@@ -73,7 +73,7 @@ function ProjectInfo() {
     console.log(task1);
     try {
       const response = await axios.post(
-        `https://project-management-tool-yvvo.onrender.com/doneTask/:${projectData.projectName}/:${task1}`
+        `https://project-management-tool-ryex.onrender.com/doneTask/:${projectData.projectName}/:${task1}`
       );
       if (response.data === "success") {
         toast.success("Done");

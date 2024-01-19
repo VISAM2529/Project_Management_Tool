@@ -25,7 +25,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://project-management-tool-yvvo.onrender.com/userDetail')
+        const response = await axios.get('https://project-management-tool-ryex.onrender.com/userDetail')
         console.log("Response = ",response.data)
         setProfileData(response.data[0])
     
@@ -36,7 +36,7 @@ function Home() {
     };
     const fetchData2 = async () => {
       try {
-        const response = await axios.get("https://project-management-tool-yvvo.onrender.com/projectDetail")
+        const response = await axios.get("https://project-management-tool-ryex.onrender.com/projectDetail")
         console.log("Projects = ",response.data)
         setProjectData(response.data[0])
 
@@ -48,7 +48,7 @@ function Home() {
     };
     const fetchData3 = async () => {
       try {
-        const response = await axios.get("https://project-management-tool-yvvo.onrender.com/TodoTasks")
+        const response = await axios.get("https://project-management-tool-ryex.onrender.com/TodoTasks")
         console.log("TodoTaskData = ",response.data)
         setTodoTaskData(response.data)
 
@@ -67,7 +67,7 @@ function Home() {
     window.location.href="/home"
     try {
       const response = await axios.post(
-        `https://project-management-tool-yvvo.onrender.com/addTodoTask`,{
+        `https://project-management-tool-ryex.onrender.com/addTodoTask`,{
           username:profileData.username,
           task:todoInputRef.current.value
         }
@@ -84,7 +84,7 @@ function Home() {
     window.location.href="/home"
     try {
       const response = await axios.delete(
-        `https://project-management-tool-yvvo.onrender.com/deleteTodoTaskData/:${task1}`
+        `https://project-management-tool-ryex.onrender.com/deleteTodoTaskData/:${task1}`
       );
       if (response.data === "Done") {
         toast.error("Deleted");

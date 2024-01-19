@@ -16,7 +16,7 @@ function SignUp() {
 
   const saveData = async()=>{
       try {
-        axios.post("https://project-management-tool-yvvo.onrender.com/userCreate",{
+        axios.post("https://project-management-tool-ryex.onrender.com/userCreate",{
           fname:fnameRef.current.value,
           lname:lnameRef.current.value,
           email:emailRef.current.value,
