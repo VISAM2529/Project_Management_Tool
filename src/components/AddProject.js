@@ -51,7 +51,7 @@ function AddProject() {
     };
     fetchData();
     fetchData2();
-  }, []);
+  }, );
   const saveData = async()=>{
     try {
       axios.post("https://project-management-tool-ryex.onrender.com/projectDetail",{
